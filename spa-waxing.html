@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spa & Waxing | Cmah Salon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#F3E5AB',
+                            DEFAULT: '#D4AF37',
+                            dark: '#AA7C11',
+                        },
+                        darkBg: '#0B0B0B',
+                        cardBg: '#161616',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 font-sans antialiased">
+
+    <header class="border-b border-gold/20 bg-black/90 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex flex-col">
+                <span class="font-serif text-2xl lg:text-3xl font-bold tracking-widest text-gold uppercase">Cmah</span>
+                <span class="text-xs text-gray-400 tracking-[0.25em] uppercase -mt-1">Salon</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wider uppercase">
+                <a href="index.html" class="hover:text-gold transition text-gray-400">Home</a>
+                <a href="facials.html" class="hover:text-gold transition text-gray-400">Facials</a>
+                <a href="hair-services.html" class="hover:text-gold transition text-gray-400">Hair Care</a>
+                <a href="spa-waxing.html" class="text-gold border-b-2 border-gold pb-1 transition">Spa & Waxing</a>
+                <a href="bridal-packages.html" class="hover:text-gold transition text-gray-400">Deals & Bridal</a>
+            </nav>
+
+            <div class="hidden lg:block">
+                <a href="booking.html" class="bg-gradient-to-r from-gold-dark to-gold text-black font-semibold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider hover:scale-105 transition duration-300 shadow-lg shadow-gold/10">
+                    <i class="far fa-calendar-alt mr-2 text-base"></i> Book Appointment
+                </a>
+            </div>
+
+            <div class="flex items-center md:hidden">
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-gold focus:outline-none transition text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-b border-gold/10 px-4 pt-2 pb-6 space-y-4 text-center">
+            <a href="index.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Home</a>
+            <a href="facials.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Facials</a>
+            <a href="hair-services.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Hair Care</a>
+            <a href="spa-waxing.html" class="block text-sm font-medium tracking-wider uppercase py-2 text-gold font-semibold">Spa & Waxing</a>
+            <a href="bridal-packages.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Deals & Bridal</a>
+            <div class="pt-4">
+                <a href="booking.html" class="inline-block bg-gradient-to-r from-gold-dark to-gold text-black font-semibold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider shadow-lg shadow-gold/10 w-full max-w-[250px]">
+                    <i class="far fa-calendar-alt mr-2 text-base"></i> Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative py-16 bg-neutral-950 border-b border-neutral-900 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold mb-3">Spa, Waxing & <span class="gold-gradient-text">Threading</span></h1>
+            <p class="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto font-light">Precision threading, therapeutic body massage treatments, and premium Rica waxing variants for silk smooth finish.</p>
+        </div>
+    </section>
+
+    <main class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="bg-cardBg border border-neutral-900 rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-4 mb-6">
+                    <h2 class="font-serif text-xl font-bold tracking-wide text-white"><i class="fas fa-scissors text-gold mr-2"></i> Precision <span class="text-gold">Threading</span></h2>
+                    <div class="h-px bg-neutral-800 flex-grow"></div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs font-light">
+                        <thead>
+                            <tr class="border-b border-neutral-800 bg-neutral-950 text-gold font-medium uppercase tracking-wider">
+                                <th class="p-4">Service Area</th>
+                                <th class="p-4">Thread Rate</th>
+                                <th class="p-4">Normal Wax</th>
+                                <th class="p-4">Premium Wax</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-neutral-900 text-gray-400">
+                            <tr class="hover:bg-black/30 transition">
+                                <td class="p-4 font-serif font-bold text-sm text-white">Eye Brows</td>
+                                <td class="p-4"><button onclick="redirectToBooking('Eye Brows (Threading)', 'Rs. 200')" class="hover:text-gold transition">Rs. 200</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Eye Brows (Normal Wax)', 'Rs. 250')" class="hover:text-gold transition">Rs. 250</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Eye Brows (Premium Wax)', 'Rs. 300')" class="hover:text-gold transition text-gold-light">Rs. 300</button></td>
+                            </tr>
+                            <tr class="hover:bg-black/30 transition">
+                                <td class="p-4 font-serif font-bold text-sm text-white">Upper Lips</td>
+                                <td class="p-4"><button onclick="redirectToBooking('Upper Lips (Threading)', 'Rs. 100')" class="hover:text-gold transition">Rs. 100</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Upper Lips (Normal Wax)', 'Rs. 150')" class="hover:text-gold transition">Rs. 150</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Upper Lips (Premium Wax)', 'Rs. 200')" class="hover:text-gold transition text-gold-light">Rs. 200</button></td>
+                            </tr>
+                            <tr class="hover:bg-black/30 transition">
+                                <td class="p-4 font-serif font-bold text-sm text-white">Fore Head</td>
+                                <td class="p-4"><button onclick="redirectToBooking('Fore Head (Threading)', 'Rs. 100')" class="hover:text-gold transition">Rs. 100</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Fore Head (Normal Wax)', 'Rs. 150')" class="hover:text-gold transition">Rs. 150</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Fore Head (Premium Wax)', 'Rs. 200')" class="hover:text-gold transition text-gold-light">Rs. 200</button></td>
+                            </tr>
+                            <tr class="hover:bg-black/30 transition">
+                                <td class="p-4 font-serif font-bold text-sm text-white">Chin Profile</td>
+                                <td class="p-4"><button onclick="redirectToBooking('Chin Profile (Threading)', 'Rs. 100')" class="hover:text-gold transition">Rs. 100</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Chin Profile (Normal Wax)', 'Rs. 150')" class="hover:text-gold transition">Rs. 150</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Chin Profile (Premium Wax)', 'Rs. 200')" class="hover:text-gold transition text-gold-light">Rs. 200</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-[10px] text-gray-500 mt-4 italic">* Tip: Click on any specific price block variant rate above to book that option instantly.</p>
+            </div>
+
+            <div class="bg-cardBg border border-neutral-900 rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-4 mb-6">
+                    <h2 class="font-serif text-xl font-bold tracking-wide text-white"><i class="fas fa-sparkles text-gold mr-2"></i> Face <span class="text-gold">Wax Profiles</span></h2>
+                    <div class="h-px bg-neutral-800 flex-grow"></div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs font-light">
+                        <thead>
+                            <tr class="border-b border-neutral-800 bg-neutral-950 text-gold font-medium uppercase tracking-wider">
+                                <th class="p-4">Area Profile</th>
+                                <th class="p-4">Normal Wax Rate</th>
+                                <th class="p-4">Premium Wax Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-neutral-900 text-gray-400">
+                            <tr class="hover:bg-black/30 transition">
+                                <td class="p-4 font-serif font-bold text-sm text-white">Full Face Wax</td>
+                                <td class="p-4"><button onclick="redirectToBooking('Full Face Wax (Normal)', 'Rs. 1,000')" class="hover:text-gold transition">Rs. 1,000</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Full Face Wax (Premium)', 'Rs. 1,500')" class="hover:text-gold transition text-gold font-medium">Rs. 1,500</button></td>
+                            </tr>
+                            <tr class="hover:bg-black/30 transition">
+                                <td class="p-4 font-serif font-bold text-sm text-white">Side Face Profile Wax</td>
+                                <td class="p-4"><button onclick="redirectToBooking('Side Face Wax (Normal)', 'Rs. 400')" class="hover:text-gold transition">Rs. 400</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Side Face Wax (Premium)', 'Rs. 500')" class="hover:text-gold transition text-gold font-medium">Rs. 500</button></td>
+                            </tr>
+                            <tr class="hover:bg-black/30 transition">
+                                <td class="p-4 font-serif font-bold text-sm text-white">Nose Structure Wax</td>
+                                <td class="p-4"><button onclick="redirectToBooking('Nose Wax (Normal)', 'Rs. 100')" class="hover:text-gold transition">Rs. 100</button></td>
+                                <td class="p-4"><button onclick="redirectToBooking('Nose Wax (Premium)', 'Rs. 200')" class="hover:text-gold transition text-gold font-medium">Rs. 200</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="font-serif text-2xl font-bold tracking-wide text-white"><i class="fas fa-burn text-gold mr-2"></i> Comprehensive <span class="text-gold">Body Waxing Menu</span></h2>
+                <div class="h-px bg-neutral-800 flex-grow"></div>
+            </div>
+            
+            <div class="overflow-x-auto bg-cardBg border border-neutral-900 rounded-2xl shadow-xl">
+                <table class="w-full text-left text-xs font-light border-collapse">
+                    <thead>
+                        <tr class="border-b border-neutral-800 bg-neutral-950 text-gold font-medium uppercase tracking-widest">
+                            <th class="p-5">Body Segment System</th>
+                            <th class="p-5">Normal Wax Rate</th>
+                            <th class="p-5">Premium Rica Wax Rate</th>
+                            <th class="p-5 text-center">Action Trigger</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-neutral-900 text-gray-400">
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Hand Wax Half Logs</td>
+                            <td class="p-5">Rs. 500</td>
+                            <td class="p-5 text-gold font-medium">Rs. 700</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleDropdownOrder(this, 'Hand Wax Half')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-3 py-1.5 outline-none text-[11px] focus:border-gold">
+                                    <option value="">Choose Options</option>
+                                    <option value="Normal Wax (Rs. 500)">Normal Variant</option>
+                                    <option value="Premium Rica Wax (Rs. 700)">Premium Rica Variant</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Hand Wax Full Logs</td>
+                            <td class="p-5">Rs. 700</td>
+                            <td class="p-5 text-gold font-medium">Rs. 1,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleDropdownOrder(this, 'Hand Wax Full')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-3 py-1.5 outline-none text-[11px] focus:border-gold">
+                                    <option value="">Choose Options</option>
+                                    <option value="Normal Wax (Rs. 700)">Normal Variant</option>
+                                    <option value="Premium Rica Wax (Rs. 1,000)">Premium Rica Variant</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Leg Wax Half Logs</td>
+                            <td class="p-5">Rs. 800</td>
+                            <td class="p-5 text-gold font-medium">Rs. 1,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleDropdownOrder(this, 'Leg Wax Half')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-3 py-1.5 outline-none text-[11px] focus:border-gold">
+                                    <option value="">Choose Options</option>
+                                    <option value="Normal Wax (Rs. 800)">Normal Variant</option>
+                                    <option value="Premium Rica Wax (Rs. 1,000)">Premium Rica Variant</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Leg Wax Full Logs</td>
+                            <td class="p-5">Rs. 1,500</td>
+                            <td class="p-5 text-gold font-medium">Rs. 2,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleDropdownOrder(this, 'Leg Wax Full')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-3 py-1.5 outline-none text-[11px] focus:border-gold">
+                                    <option value="">Choose Options</option>
+                                    <option value="Normal Wax (Rs. 1,500)">Normal Variant</option>
+                                    <option value="Premium Rica Wax (Rs. 2,000)">Premium Rica Variant</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Under Arms Profile Wax</td>
+                            <td class="p-5">Rs. 500</td>
+                            <td class="p-5 text-gold font-medium">Rs. 700</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleDropdownOrder(this, 'Under Arms Wax')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-3 py-1.5 outline-none text-[11px] focus:border-gold">
+                                    <option value="">Choose Options</option>
+                                    <option value="Normal Wax (Rs. 500)">Normal Variant</option>
+                                    <option value="Premium Rica Wax (Rs. 700)">Premium Rica Variant</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Neck Line Profile Wax</td>
+                            <td class="p-5">Rs. 500</td>
+                            <td class="p-5 text-gold font-medium">Rs. 700</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleDropdownOrder(this, 'Neck Wax')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-3 py-1.5 outline-none text-[11px] focus:border-gold">
+                                    <option value="">Choose Options</option>
+                                    <option value="Normal Wax (Rs. 500)">Normal Variant</option>
+                                    <option value="Premium Rica Wax (Rs. 700)">Premium Rica Variant</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="font-serif text-2xl font-bold tracking-wide text-white"><i class="fas fa-spa text-gold mr-2"></i> Hand, Foot Spa & <span class="text-gold">Body Relaxation</span></h2>
+                <div class="h-px bg-neutral-800 flex-grow"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-cardBg border border-neutral-800 rounded-2xl p-6 flex flex-col justify-between hover:border-gold/30 transition group duration-300 shadow-lg">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="p-3 bg-gold/10 rounded-xl text-gold group-hover:bg-gold group-hover:text-black transition duration-300">
+                                <i class="fas fa-hand-sparkles text-xl"></i>
+                            </span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500 font-medium">Spa Therapy</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-white mb-2 group-hover:text-gold transition">Whitening Manicure</h3>
+                        <p class="text-gray-400 text-xs font-light leading-relaxed mb-6">Bespoke whitening treatment designed cleanly to scrub, hydrate and elevate skin luminosity levels.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-neutral-800">
+                        <div>
+                            <span class="text-xs text-gray-500 block">Price Rate</span>
+                            <span class="text-lg font-bold text-gold">Rs. 1,500</span>
+                        </div>
+                        <button onclick="redirectToBooking('Whitening Manicure', 'Rs. 1,500')" class="bg-neutral-900 hover:bg-gold text-gray-400 hover:text-black text-xs font-semibold px-4 py-2 rounded-full tracking-wider uppercase transition duration-300 border border-neutral-800 hover:border-gold">
+                             Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-2xl p-6 flex flex-col justify-between hover:border-gold/30 transition group duration-300 shadow-lg">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="p-3 bg-gold/10 rounded-xl text-gold group-hover:bg-gold group-hover:text-black transition duration-300">
+                                <i class="fas fa-shoe-prints text-xl"></i>
+                            </span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500 font-medium">Spa Therapy</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-white mb-2 group-hover:text-gold transition">Whitening Pedicure</h3>
+                        <p class="text-gray-400 text-xs font-light leading-relaxed mb-6">Exfoliating clinical foot therapy aimed tightly to restore cell elasticity, removing safe fatigue factors.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-neutral-800">
+                        <div>
+                            <span class="text-xs text-gray-500 block">Price Rate</span>
+                            <span class="text-lg font-bold text-gold">Rs. 2,000</span>
+                        </div>
+                        <button onclick="redirectToBooking('Whitening Pedicure', 'Rs. 2,000')" class="bg-neutral-900 hover:bg-gold text-gray-400 hover:text-black text-xs font-semibold px-4 py-2 rounded-full tracking-wider uppercase transition duration-300 border border-neutral-800 hover:border-gold">
+                             Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-2xl p-6 flex flex-col justify-between hover:border-gold/30 transition group duration-300 shadow-lg">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="p-3 bg-gold/10 rounded-xl text-gold group-hover:bg-gold group-hover:text-black transition duration-300">
+                                <i class="fas fa-hot-stone text-xl"></i>
+                            </span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500 font-medium">Body Relax</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-white mb-2 group-hover:text-gold transition">Full Body Massage Therapy</h3>
+                        <p class="text-gray-400 text-xs font-light leading-relaxed mb-6">Bespoke essential herbal therapeutic oils session configuration engineered to drop absolute core fatigue.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-neutral-800">
+                        <div>
+                            <span class="text-xs text-gray-500 block">Price Rate</span>
+                            <span class="text-lg font-bold text-gold">Rs. 4,500</span>
+                        </div>
+                        <button onclick="redirectToBooking('Full Body Massage Therapy', 'Rs. 4,500')" class="bg-neutral-900 hover:bg-gold text-gray-400 hover:text-black text-xs font-semibold px-4 py-2 rounded-full tracking-wider uppercase transition duration-300 border border-neutral-800 hover:border-gold">
+                             Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-black text-gray-500 pt-16 pb-8 border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <span class="font-serif text-xl font-bold tracking-widest text-gold uppercase block mb-3">Cmah Salon</span>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Luxury beauty treatment solutions crafted to perfection because you deserve nothing less than absolute shine.</p>
+                <div class="flex space-x-4 text-gray-400">
+                    <a href="https://instagram.com/cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                        <i class="fab fa-instagram text-sm"></i>
+                    </a>
+                    <a href="https://facebook.com/cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                        <i class="fab fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="https://tiktok.com/@cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                        <i class="fab fa-tiktok text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4 border-l-2 border-gold pl-2">Salon Details</h4>
+                <p class="text-xs font-light text-gray-400 leading-relaxed mb-2">
+                    <i class="fas fa-clock text-gold mr-2"></i> Mon - Thu Packages Available!
+                </p>
+                <p class="text-xs font-light text-gray-400 leading-relaxed">
+                    <i class="fas fa-map-marker-alt text-gold mr-2"></i> Dhoraji Silani Chowk, Opposite Habib Plaza, Near Al Khidmat, Karachi.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4 border-l-2 border-gold pl-2">Service Directory</h4>
+                <ul class="grid grid-cols-2 gap-2 text-xs font-light">
+                    <li><a href="facials.html" class="hover:text-gold transition">Facials</a></li>
+                    <li><a href="hair-services.html" class="hover:text-gold transition">Hair Styling</a></li>
+                    <li><a href="spa-waxing.html" class="text-gold">Spa Menu</a></li>
+                    <li><a href="bridal-packages.html" class="hover:text-gold transition">Bridal Deals</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-neutral-900 text-center text-xs tracking-wider">
+            <p>&copy; 2026 Cmah Salon. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function redirectToBooking(serviceName, price) {
+            const targetUrl = `booking.html?service=${encodeURIComponent(serviceName)}&price=${encodeURIComponent(price)}`;
+            window.location.href = targetUrl;
+        }
+
+        function handleDropdownOrder(selectElement, baseTreatmentName) {
+            const chosenValue = selectElement.value;
+            if (chosenValue !== "") {
+                const combinedLabel = `${baseTreatmentName} [Variant: ${chosenValue}]`;
+                redirectToBooking(combinedLabel, "");
+                selectElement.value = ""; // Reset dropdown index state
+            }
+        }
+
+        // Toggle logic for Mobile Responsive Hamburger Navbar
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btnIcon = document.querySelector('#mobile-menu-btn i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                btnIcon.className = "fas fa-times"; // Toggle Close Cross Sign
+            } else {
+                menu.classList.add('hidden');
+                btnIcon.className = "fas fa-bars";  // Returns Hamburger
+            }
+        }
+    </script>
+</body>
+</html>

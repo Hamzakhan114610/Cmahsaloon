@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Services & Treatments | Cmah Salon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+   <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    gold: {
+                        light: '#F3E5AB',
+                        DEFAULT: '#D4AF37',
+                        dark: '#AA7C11',
+                    },
+                    darkBg: '#0B0B0B',
+                    cardBg: '#161616',
+                }, 
+                fontFamily: {
+                    serif: ['Playfair Display', 'serif'],
+                    sans: ['Poppins', 'sans-serif'],
+                }
+            }
+        }
+    }
+</script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 font-sans antialiased">
+
+    <header class="border-b border-gold/20 bg-black/90 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex flex-col">
+                <span class="font-serif text-2xl lg:text-3xl font-bold tracking-widest text-gold uppercase">Cmah</span>
+                <span class="text-xs text-gray-400 tracking-[0.25em] uppercase -mt-1">Salon</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wider uppercase">
+                <a href="index.html" class="hover:text-gold transition text-gray-400">Home</a>
+                <a href="facials.html" class="hover:text-gold transition text-gray-400">Facials</a>
+                <a href="hair-services.html" class="text-gold border-b-2 border-gold pb-1 transition">Hair Care</a>
+                <a href="spa-waxing.html" class="hover:text-gold transition text-gray-400">Spa & Waxing</a>
+                <a href="bridal-packages.html" class="hover:text-gold transition text-gray-400">Deals & Bridal</a>
+            </nav>
+
+            <div class="hidden lg:block">
+                <a href="booking.html" class="bg-gradient-to-r from-gold-dark to-gold text-black font-semibold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider hover:scale-105 transition duration-300 shadow-lg shadow-gold/10">
+                    <i class="far fa-calendar-alt mr-2 text-base"></i> Book Appointment
+                </a>
+            </div>
+
+            <div class="flex items-center md:hidden">
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-gold focus:outline-none transition text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-b border-gold/10 px-4 pt-2 pb-6 space-y-4 text-center">
+            <a href="index.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Home</a>
+            <a href="facials.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Facials</a>
+            <a href="hair-services.html" class="block text-sm font-medium tracking-wider uppercase py-2 text-gold font-semibold">Hair Care</a>
+            <a href="spa-waxing.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Spa & Waxing</a>
+            <a href="bridal-packages.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Deals & Bridal</a>
+            <div class="pt-4">
+                <a href="booking.html" class="inline-block bg-gradient-to-r from-gold-dark to-gold text-black font-semibold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider shadow-lg shadow-gold/10 w-full max-w-[250px]">
+                    <i class="far fa-calendar-alt mr-2 text-base"></i> Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative py-16 bg-neutral-950 border-b border-neutral-900 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold mb-3">Expert Hair Couture & <span class="gold-gradient-text">Treatments</span></h1>
+            <p class="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto font-light">From premium global transformation colors to absolute advanced straight and sleek locks.</p>
+        </div>
+    </section>
+
+    <main class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+
+        <div>
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 border-b border-neutral-900 pb-4">
+                <div>
+                    <h2 class="font-serif text-2xl font-bold tracking-wide text-white">Luxury <span class="text-gold">Hair Colors</span></h2>
+                    <p class="text-xs text-gray-500 mt-1">Select staff profiling below to preview absolute price variants.</p>
+                </div>
+                <div class="flex bg-neutral-900 p-1 rounded-xl border border-neutral-800 self-start">
+                    <button id="btn-junior" onclick="toggleColorStaff('junior')" class="px-4 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase bg-gold text-black transition duration-300">Junior Staff</button>
+                    <button id="btn-senior" onclick="toggleColorStaff('senior')" class="px-4 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase text-gray-400 hover:text-white transition duration-300">Senior Artist</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <script>
+                    const hairColors = [
+                        { name: "Dye Application", junior: "500", senior: "1,000" },
+                        { name: "Mehendi Application", junior: "500", senior: "1,000" },
+                        { name: "One Dye Natural", junior: "3,500", senior: "5,000" },
+                        { name: "Root Touch-up Natural", junior: "3,500", senior: "4,000" },
+                        { name: "One Dye Fashion Colors", junior: "6,000", senior: "8,000" },
+                        { name: "Root Touch-up with Fashion Colors", junior: "4,000", senior: "8,000" },
+                        { name: "Full Streak", junior: "8,000", senior: "15,000" },
+                        { name: "High Lights", junior: "7,000", senior: "14,000" },
+                        { name: "Low Lights", junior: "5,000", senior: "10,000" },
+                        { name: "Baby Lights", junior: "8,000", senior: "15,000" },
+                        { name: "Ombre", junior: "8,000", senior: "15,000" },
+                        { name: "Balayage", junior: "10,000", senior: "15,000" },
+                        { name: "Base Color with High Light", junior: "10,000", senior: "15,000" },
+                        { name: "Per Foil", junior: "600", senior: "1,000" }
+                    ];
+
+                    let selectedStaff = 'junior';
+
+                    // Extracted initialization scope function logic safely
+                    function renderColorCards() {
+                        let html = '';
+                        hairColors.forEach((item, index) => {
+                            const price = selectedStaff === 'junior' ? item.junior : item.senior;
+                            html += `
+                            <div class="bg-cardBg border border-neutral-900 rounded-xl p-5 flex flex-col justify-between hover:border-gold/20 transition duration-300">
+                                <div>
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h3 class="font-serif font-bold text-base text-white">${item.name}</h3>
+                                        <span class="text-[10px] text-gray-500 uppercase tracking-widest bg-neutral-900 px-2 py-0.5 rounded border border-neutral-800">${selectedStaff}</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400 font-light">Premium multi-tonal application structure for safe finish texture.</p>
+                                </div>
+                                <div class="flex items-center justify-between pt-4 mt-4 border-t border-neutral-900">
+                                    <span class="text-base font-bold text-gold">Rs. ${price}</span>
+                                    <button onclick="redirectToBooking('${item.name} (${selectedStaff} Artist)', 'Rs. ${price}')" class="text-xs bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black font-semibold px-4 py-2 rounded-full border border-neutral-800 hover:border-gold transition">Buy Now</button>
+                                </div>
+                            </div>`;
+                        });
+                        document.getElementById('color-grid').innerHTML = html;
+                    }
+                    
+                    function toggleColorStaff(staff) {
+                        selectedStaff = staff;
+                        if(staff === 'junior') {
+                            document.getElementById('btn-junior').className = "px-4 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase bg-gold text-black transition duration-300";
+                            document.getElementById('btn-senior').className = "px-4 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase text-gray-400 hover:text-white transition duration-300";
+                        } else {
+                            document.getElementById('btn-senior').className = "px-4 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase bg-gold text-black transition duration-300";
+                            document.getElementById('btn-junior').className = "px-4 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase text-gray-400 hover:text-white transition duration-300";
+                        }
+                        renderColorCards();
+                    }
+                </script>
+                
+                <div id="color-grid" class="contents">
+                    </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="mb-8 border-b border-neutral-900 pb-4">
+                <h2 class="font-serif text-2xl font-bold tracking-wide text-white">Advanced <span class="text-gold">Hair Treatments</span></h2>
+                <p class="text-xs text-gray-500 mt-1">Rates vary strictly dependent on individual length logs: Shoulder | Middle | Waist.</p>
+            </div>
+
+            <div class="overflow-x-auto bg-cardBg border border-neutral-900 rounded-2xl">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-neutral-800 bg-neutral-950 text-xs font-medium tracking-widest text-gold uppercase">
+                            <th class="p-5">Treatment Method</th>
+                            <th class="p-5">Shoulder Length</th>
+                            <th class="p-5">Middle Length</th>
+                            <th class="p-5">Waist Length</th>
+                            <th class="p-5 text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs font-light divide-y divide-neutral-900">
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Rebonding Therapy</td>
+                            <td class="p-5 text-gray-400">Rs. 10,000</td>
+                            <td class="p-5 text-gray-400">Rs. 15,000</td>
+                            <td class="p-5 text-gray-400">Rs. 20,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleTableOrder(this, 'Rebonding Therapy')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
+                                    <option value="">Book Now</option>
+                                    <option value="Shoulder (Rs. 10,000)">Shoulder</option>
+                                    <option value="Middle (Rs. 15,000)">Middle</option>
+                                    <option value="Waist (Rs. 20,000)">Waist</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Extenso Treatment</td>
+                            <td class="p-5 text-gray-400">Rs. 10,000</td>
+                            <td class="p-5 text-gray-400">Rs. 15,000</td>
+                            <td class="p-5 text-gray-400">Rs. 20,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleTableOrder(this, 'Extenso Treatment')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
+                                    <option value="">Book Now</option>
+                                    <option value="Shoulder (Rs. 10,000)">Shoulder</option>
+                                    <option value="Middle (Rs. 15,000)">Middle</option>
+                                    <option value="Waist (Rs. 20,000)">Waist</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Premium Keratin Care</td>
+                            <td class="p-5 text-gray-400">Rs. 12,000</td>
+                            <td class="p-5 text-gray-400">Rs. 15,000</td>
+                            <td class="p-5 text-gray-400">Rs. 18,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleTableOrder(this, 'Premium Keratin Care')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
+                                    <option value="">Book Now</option>
+                                    <option value="Shoulder (Rs. 12,000)">Shoulder</option>
+                                    <option value="Middle (Rs. 15,000)">Middle</option>
+                                    <option value="Waist (Rs. 18,000)">Waist</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Nano Plastia Reconstruction</td>
+                            <td class="p-5 text-gray-400">Rs. 13,000</td>
+                            <td class="p-5 text-gray-400">Rs. 18,000</td>
+                            <td class="p-5 text-gray-400">Rs. 20,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleTableOrder(this, 'Nano Plastia Reconstruction')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
+                                    <option value="">Book Now</option>
+                                    <option value="Shoulder (Rs. 13,000)">Shoulder</option>
+                                    <option value="Middle (Rs. 18,000)">Middle</option>
+                                    <option value="Waist (Rs. 20,000)">Waist</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Straight Shine Glaze</td>
+                            <td class="p-5 text-gray-400">Rs. 8,000</td>
+                            <td class="p-5 text-gray-400">Rs. 15,000</td>
+                            <td class="p-5 text-gray-400">Rs. 20,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleTableOrder(this, 'Straight Shine Glaze')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
+                                    <option value="">Book Now</option>
+                                    <option value="Shoulder (Rs. 8,000)">Shoulder</option>
+                                    <option value="Middle (Rs. 15,000)">Middle</option>
+                                    <option value="Waist (Rs. 20,000)">Waist</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Kerabond Structural Infusion</td>
+                            <td class="p-5 text-gray-400">Rs. 15,000</td>
+                            <td class="p-5 text-gray-400">Rs. 20,000</td>
+                            <td class="p-5 text-gray-400">Rs. 25,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleTableOrder(this, 'Kerabond Structural Infusion')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
+                                    <option value="">Book Now</option>
+                                    <option value="Shoulder (Rs. 15,000)">Shoulder</option>
+                                    <option value="Middle (Rs. 20,000)">Middle</option>
+                                    <option value="Waist (Rs. 25,000)">Waist</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-black/40 transition">
+                            <td class="p-5 font-serif font-bold text-sm text-white">Basic Protein Infusion</td>
+                            <td class="p-5 text-gray-400">Rs. 1,000</td>
+                            <td class="p-5 text-gray-400">Rs. 1,500</td>
+                            <td class="p-5 text-gray-400">Rs. 2,000</td>
+                            <td class="p-5 text-center">
+                                <select onchange="handleTableOrder(this, 'Basic Protein Infusion')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
+                                    <option value="">Book Now</option>
+                                    <option value="Shoulder (Rs. 1,000)">Shoulder</option>
+                                    <option value="Middle (Rs. 1,500)">Middle</option>
+                                    <option value="Waist (Rs. 2,000)">Waist</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-black text-gray-500 pt-16 pb-8 border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <span class="font-serif text-xl font-bold tracking-widest text-gold uppercase block mb-3">Cmah Salon</span>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Luxury beauty treatment solutions crafted to perfection because you deserve nothing less than absolute shine.</p>
+                <div class="flex space-x-4 text-gray-400">
+                    <a href="https://instagram.com/cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                        <i class="fab fa-instagram text-sm"></i>
+                    </a>
+                    <a href="https://facebook.com/cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                        <i class="fab fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="https://tiktok.com/@cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                        <i class="fab fa-tiktok text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4 border-l-2 border-gold pl-2">Salon Details</h4>
+                <p class="text-xs font-light text-gray-400 leading-relaxed mb-2">
+                    <i class="fas fa-clock text-gold mr-2"></i> Mon - Thu Packages Available!
+                </p>
+                <p class="text-xs font-light text-gray-400 leading-relaxed">
+                    <i class="fas fa-map-marker-alt text-gold mr-2"></i> Dhoraji Silani Chowk, Opposite Habib Plaza, Near Al Khidmat, Karachi.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4 border-l-2 border-gold pl-2">Service Directory</h4>
+                <ul class="grid grid-cols-2 gap-2 text-xs font-light">
+                    <li><a href="facials.html" class="hover:text-gold transition">Facials</a></li>
+                    <li><a href="hair-services.html" class="text-gold">Hair Styling</a></li>
+                    <li><a href="spa-waxing.html" class="hover:text-gold transition">Spa Menu</a></li>
+                    <li><a href="bridal-packages.html" class="hover:text-gold transition">Bridal Deals</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-neutral-900 text-center text-xs tracking-wider">
+            <p>&copy; 2026 Cmah Salon. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initial setup to build the grids on page load
+        renderColorCards();
+
+        function redirectToBooking(serviceName, price) {
+            const targetUrl = `booking.html?service=${encodeURIComponent(serviceName)}&price=${encodeURIComponent(price)}`;
+            window.location.href = targetUrl;
+        }
+
+        function handleTableOrder(selectElement, treatmentName) {
+            const selectedValue = selectElement.value;
+            if (selectedValue !== "") {
+                const fullServiceName = `${treatmentName} (${selectedValue})`;
+                redirectToBooking(fullServiceName, "");
+                selectElement.value = "";
+            }
+        }
+
+        // Toggle logic for Mobile Responsive Hamburger Navbar
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btnIcon = document.querySelector('#mobile-menu-btn i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                btnIcon.className = "fas fa-times"; // Changes icon to 'X' when open
+            } else {
+                menu.classList.add('hidden');
+                btnIcon.className = "fas fa-bars";  // Changes icon back to hamburger
+            }
+        }
+    </script>
+</body>
+</html>

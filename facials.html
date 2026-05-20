@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facials & Aesthetics | Cmah Salon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#F3E5AB',
+                            DEFAULT: '#D4AF37',
+                            dark: '#AA7C11',
+                        },
+                        darkBg: '#0B0B0B',
+                        cardBg: '#161616',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 font-sans antialiased">
+
+    <header class="border-b border-gold/20 bg-black/90 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex flex-col">
+                <span class="font-serif text-2xl lg:text-3xl font-bold tracking-widest text-gold uppercase">Cmah</span>
+                <span class="text-xs text-gray-400 tracking-[0.25em] uppercase -mt-1">Salon</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wider uppercase">
+                <a href="index.html" class="hover:text-gold transition text-gray-400">Home</a>
+                <a href="facials.html" class="text-gold border-b-2 border-gold pb-1 transition">Facials</a>
+                <a href="hair-services.html" class="hover:text-gold transition text-gray-400">Hair Care</a>
+                <a href="spa-waxing.html" class="hover:text-gold transition text-gray-400">Spa & Waxing</a>
+                <a href="bridal-packages.html" class="hover:text-gold transition text-gray-400">Deals & Bridal</a>
+            </nav>
+
+            <div class="hidden lg:block">
+                <a href="booking.html" class="bg-gradient-to-r from-gold-dark to-gold text-black font-semibold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider hover:scale-105 transition duration-300 shadow-lg shadow-gold/10">
+                    <i class="far fa-calendar-alt mr-2 text-base"></i> Book Appointment
+                </a>
+            </div>
+
+            <div class="flex items-center md:hidden">
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-gold focus:outline-none transition text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-b border-gold/10 px-4 pt-2 pb-6 space-y-4 text-center">
+            <a href="index.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Home</a>
+            <a href="facials.html" class="block text-sm font-medium tracking-wider uppercase py-2 text-gold font-semibold">Facials</a>
+            <a href="hair-services.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Hair Care</a>
+            <a href="spa-waxing.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Spa & Waxing</a>
+            <a href="bridal-packages.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Deals & Bridal</a>
+            <div class="pt-4">
+                <a href="booking.html" class="inline-block bg-gradient-to-r from-gold-dark to-gold text-black font-semibold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider shadow-lg shadow-gold/10 w-full max-w-[250px]">
+                    <i class="far fa-calendar-alt mr-2 text-base"></i> Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative py-16 bg-neutral-950 border-b border-neutral-900 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold mb-3">Skin Treatments & <span class="gold-gradient-text">Facials</span></h1>
+            <p class="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto font-light">Indulge in our exquisite skincare routines. From deep pore cleansing to elite skin transformation therapies.</p>
+        </div>
+    </section>
+
+    <main class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+
+        <div>
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="font-serif text-2xl font-bold tracking-wide text-white">Premium <span class="text-gold">Aesthetic Facials</span></h2>
+                <div class="h-px bg-neutral-800 flex-grow"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-cardBg border border-neutral-800 rounded-2xl p-5 flex flex-col justify-between hover:border-gold/30 transition duration-300">
+                    <div>
+                        <div class="text-gold text-lg mb-2"><i class="fas fa-droplet"></i></div>
+                        <h3 class="font-serif text-base font-bold text-white mb-1">Hydra Facial</h3>
+                        <p class="text-gray-400 text-xs font-light mb-4 leading-relaxed">Advanced multi-step custom hydration treatment for ultimate glow and deep cleaning.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-neutral-900">
+                        <span class="text-sm font-semibold text-gold">Rs. 6,000</span>
+                        <button onclick="sendToBookingPage('Hydra Facial', 'Rs. 6,000')" class="text-xs bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black font-medium px-3 py-1.5 rounded-full border border-neutral-800 hover:border-gold transition">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-2xl p-5 flex flex-col justify-between hover:border-gold/30 transition duration-300">
+                    <div>
+                        <div class="text-gold text-lg mb-2"><i class="fas fa-wind"></i></div>
+                        <h3 class="font-serif text-base font-bold text-white mb-1">Oxygen Facial</h3>
+                        <p class="text-gray-400 text-xs font-light mb-4 leading-relaxed">Infuses pure atmospheric oxygen stream directly down to cellular levels.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-neutral-900">
+                        <span class="text-sm font-semibold text-gold">Rs. 7,000</span>
+                        <button onclick="sendToBookingPage('Oxygen Facial', 'Rs. 7,000')" class="text-xs bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black font-medium px-3 py-1.5 rounded-full border border-neutral-800 hover:border-gold transition">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-2xl p-5 flex flex-col justify-between hover:border-gold/30 transition duration-300">
+                    <div>
+                        <div class="text-gold text-lg mb-2"><i class="fas fa-wand-magic-sparkles"></i></div>
+                        <h3 class="font-serif text-base font-bold text-white mb-1">Whitening Facial + PDT</h3>
+                        <p class="text-gray-400 text-xs font-light mb-4 leading-relaxed">Integrated skin brightening compound enhanced with Photodynamic therapy exposure.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-neutral-900">
+                        <span class="text-sm font-semibold text-gold">Rs. 3,000</span>
+                        <button onclick="sendToBookingPage('Whitening Facial + PDT Light', 'Rs. 3,000')" class="text-xs bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black font-medium px-3 py-1.5 rounded-full border border-neutral-800 hover:border-gold transition">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-2xl p-5 flex flex-col justify-between hover:border-gold/30 transition duration-300">
+                    <div>
+                        <div class="text-gold text-lg mb-2"><i class="fas fa-bolt"></i></div>
+                        <h3 class="font-serif text-base font-bold text-white mb-1">Whitening Cleansing + PDT</h3>
+                        <p class="text-gray-400 text-xs font-light mb-4 leading-relaxed">Deep therapeutic tissue cleansing session scaled with specialized PDT spectrum.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-neutral-900">
+                        <span class="text-sm font-semibold text-gold">Rs. 2,500</span>
+                        <button onclick="sendToBookingPage('Whitening Cleansing + PDT Light', 'Rs. 2,500')" class="text-xs bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black font-medium px-3 py-1.5 rounded-full border border-neutral-800 hover:border-gold transition">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="font-serif text-2xl font-bold tracking-wide text-white">Signature & <span class="text-gold">Herbal Facials</span></h2>
+                <div class="h-px bg-neutral-800 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Skiva Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 3,500</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Skiva Facial', 'Rs. 3,500')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Relax Whitening Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 3,000</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Relax Whitening Facial', 'Rs. 3,000')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Whitening + Gold Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 2,000</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Whitening + Gold Facial', 'Rs. 2,000')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Blush Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 2,000</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Blush Facial', 'Rs. 2,000')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">CHI Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 2,000</p>
+                    </div>
+                    <button onclick="sendToBookingPage('CHI Facial', 'Rs. 2,000')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">T.G.S Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 2,000</p>
+                    </div>
+                    <button onclick="sendToBookingPage('T.G.S Facial', 'Rs. 2,000')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Rica Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 2,000</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Rica Facial', 'Rs. 2,000')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Dermacos Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 1,500</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Dermacos Facial', 'Rs. 1,500')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Whitening Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 1,500</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Whitening Facial', 'Rs. 1,500')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Gold Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 1,500</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Gold Facial', 'Rs. 1,500')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Herbal Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 1,200</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Herbal Facial', 'Rs. 1,200')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+
+                <div class="bg-cardBg border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition">
+                    <div>
+                        <h3 class="font-serif font-bold text-white mb-1">Normal Facial</h3>
+                        <p class="text-gray-400 text-xs font-light">Rs. 1,000</p>
+                    </div>
+                    <button onclick="sendToBookingPage('Normal Facial', 'Rs. 1,000')" class="mt-4 w-full py-2 bg-neutral-900 text-gray-400 hover:bg-gold hover:text-black text-xs font-semibold rounded-lg transition border border-neutral-800 hover:border-gold">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <div class="flex items-center gap-4 mb-6">
+                    <h2 class="font-serif text-xl font-bold tracking-wide text-white"><span class="text-gold">Cleansing</span> & Skin Polish</h2>
+                    <div class="h-px bg-neutral-800 flex-grow"></div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Whitening Cleansing</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 1,500</span>
+                            <button onclick="sendToBookingPage('Whitening Cleansing', 'Rs. 1,500')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Face Polish With Massage</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 1,300</span>
+                            <button onclick="sendToBookingPage('Face Polish With Massage', 'Rs. 1,300')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Normal Cleansing</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 1,000</span>
+                            <button onclick="sendToBookingPage('Normal Cleansing', 'Rs. 1,000')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center gap-4 mb-6">
+                    <h2 class="font-serif text-xl font-bold tracking-wide text-white">Advanced <span class="text-gold">Bleach Profiles</span></h2>
+                    <div class="h-px bg-neutral-800 flex-grow"></div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Body Bleach</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 3,500</span>
+                            <button onclick="sendToBookingPage('Body Bleach', 'Rs. 3,500')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Face Bleach + Face Polish</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 800</span>
+                            <button onclick="sendToBookingPage('Face Bleach + Face Polish', 'Rs. 800')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Face Polish</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 650</span>
+                            <button onclick="sendToBookingPage('Face Polish', 'Rs. 650')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Foot Bleach</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 600</span>
+                            <button onclick="sendToBookingPage('Foot Bleach', 'Rs. 600')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Face Bleach Whitening</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 550</span>
+                            <button onclick="sendToBookingPage('Face Bleach Whitening', 'Rs. 550')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Hand Bleach</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 500</span>
+                            <button onclick="sendToBookingPage('Hand Bleach', 'Rs. 500')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-neutral-900 p-4 rounded-xl flex justify-between items-center hover:border-neutral-800 transition">
+                        <div>
+                            <h4 class="font-medium text-sm text-white">Face Bleach Normal</h4>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-gold">Rs. 450</span>
+                            <button onclick="sendToBookingPage('Face Bleach Normal', 'Rs. 450')" class="text-[10px] bg-neutral-900 px-3 py-1 text-gray-400 border border-neutral-800 rounded-md hover:text-gold hover:border-gold transition">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-black text-gray-500 pt-16 pb-8 border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <span class="font-serif text-xl font-bold tracking-widest text-gold uppercase block mb-3">Cmah Salon</span>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Luxury beauty treatment solutions crafted to perfection because you deserve nothing less than absolute shine.</p>
+                <div class="flex space-x-4 text-gray-400">
+                    <a href="https://instagram.com/cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                        <i class="fab fa-instagram text-sm"></i>
+                    </a>
+                    <a href="https://facebook.com/cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                        <i class="fab fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="https://tiktok.com/@cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                        <i class="fab fa-tiktok text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4 border-l-2 border-gold pl-2">Salon Details</h4>
+                <p class="text-xs font-light text-gray-400 leading-relaxed mb-2">
+                    <i class="fas fa-clock text-gold mr-2"></i> Mon - Thu Packages Available!
+                </p>
+                <p class="text-xs font-light text-gray-400 leading-relaxed">
+                    <i class="fas fa-map-marker-alt text-gold mr-2"></i> Dhoraji Silani Chowk, Opposite Habib Plaza, Near Al Khidmat, Karachi.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4 border-l-2 border-gold pl-2">Service Directory</h4>
+                <ul class="grid grid-cols-2 gap-2 text-xs font-light">
+                    <li><a href="facials.html" class="text-gold">Facials</a></li>
+                    <li><a href="hair-services.html" class="hover:text-gold transition">Hair Styling</a></li>
+                    <li><a href="spa-waxing.html" class="hover:text-gold transition">Spa Menu</a></li>
+                    <li><a href="bridal-packages.html" class="hover:text-gold transition">Bridal Deals</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-neutral-900 text-center text-xs tracking-wider">
+            <p>&copy; 2026 Cmah Salon. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendToBookingPage(serviceName, price) {
+            // Service data local storage me save karega
+            localStorage.setItem("selectedService", `${serviceName} (${price})`);
+            // Booking page par user ko redirect kar dega
+            window.location.href = "booking.html";
+        }
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btnIcon = document.querySelector('#mobile-menu-btn i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                btnIcon.className = "fas fa-times"; // Toggle Close Sign 'X'
+            } else {
+                menu.classList.add('hidden');
+                btnIcon.className = "fas fa-bars";  // Standard Hamburger Display
+            }
+        }
+    </script>
+</body>
+</html>
