@@ -35,15 +35,21 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
+        }
     </style>
 </head>
-<body class="bg-darkBg text-gray-200 font-sans antialiased">
+<body class="bg-darkBg text-gray-200 font-sans antialiased custom-scrollbar">
 
     <header class="border-b border-gold/20 bg-black/90 sticky top-0 z-50 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex flex-col">
-                <span class="font-serif text-2xl lg:text-3xl font-bold tracking-widest text-gold uppercase">Cmah</span>
-                <span class="text-xs text-gray-400 tracking-[0.25em] uppercase -mt-1">Salon</span>
+            <a href="index.html" class="flex items-center h-full">
+                <img src="img/Screenshot 2026-05-21 132335.png" alt="C'mah Salon Logo" class="h-16 w-auto object-contain py-1">
             </a>
             
             <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wider uppercase">

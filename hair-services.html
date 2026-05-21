@@ -9,25 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
    <script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    gold: {
-                        light: '#F3E5AB',
-                        DEFAULT: '#D4AF37',
-                        dark: '#AA7C11',
-                    },
-                    darkBg: '#0B0B0B',
-                    cardBg: '#161616',
-                }, 
-                fontFamily: {
-                    serif: ['Playfair Display', 'serif'],
-                    sans: ['Poppins', 'sans-serif'],
-                }
-            }
-        }
-    }
+   tailwind.config = {
+       theme: {
+           extend: {
+               colors: {
+                   gold: {
+                       light: '#F3E5AB',
+                       DEFAULT: '#D4AF37',
+                       dark: '#AA7C11',
+                   },
+                   darkBg: '#0B0B0B',
+                   cardBg: '#161616',
+               }, 
+               fontFamily: {
+                   serif: ['Playfair Display', 'serif'],
+                   sans: ['Poppins', 'sans-serif'],
+               }
+           }
+       }
+   }
 </script>
     <style>
         .gold-gradient-text {
@@ -35,27 +35,38 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* EXTRA LUXURY GLOW */
+        .logo-glow {
+            filter: drop-shadow(0 0 12px rgba(212,175,55,0.45));
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
+        }
     </style>
 </head>
-<body class="bg-darkBg text-gray-200 font-sans antialiased">
-
-    <header class="border-b border-gold/20 bg-black/90 sticky top-0 z-50 backdrop-blur-md">
+<body class="bg-darkBg text-gray-200 font-sans antialiased custom-scrollbar">
+<header class="border-b border-gold/20 bg-black/90 sticky top-0 z-50 backdrop-blur-md no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex flex-col">
-                <span class="font-serif text-2xl lg:text-3xl font-bold tracking-widest text-gold uppercase">Cmah</span>
-                <span class="text-xs text-gray-400 tracking-[0.25em] uppercase -mt-1">Salon</span>
+            <a href="index.html" class="flex items-center h-full">
+                <img src="img/Screenshot 2026-05-21 132335.png" alt="C'mah Salon Logo" class="h-16 w-auto object-contain py-1">
             </a>
             
             <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wider uppercase">
                 <a href="index.html" class="hover:text-gold transition text-gray-400">Home</a>
                 <a href="facials.html" class="hover:text-gold transition text-gray-400">Facials</a>
-                <a href="hair-services.html" class="text-gold border-b-2 border-gold pb-1 transition">Hair Care</a>
+                <a href="hair-services.html" class="hover:text-gold transition text-gray-400">Hair Care</a>
                 <a href="spa-waxing.html" class="hover:text-gold transition text-gray-400">Spa & Waxing</a>
                 <a href="bridal-packages.html" class="hover:text-gold transition text-gray-400">Deals & Bridal</a>
             </nav>
 
             <div class="hidden lg:block">
-                <a href="booking.html" class="bg-gradient-to-r from-gold-dark to-gold text-black font-semibold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider hover:scale-105 transition duration-300 shadow-lg shadow-gold/10">
+                <a href="booking.html" class="bg-gradient-to-r from-gold-dark to-gold text-black font-semibold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider scale-105 shadow-lg shadow-gold/10">
                     <i class="far fa-calendar-alt mr-2 text-base"></i> Book Appointment
                 </a>
             </div>
@@ -70,16 +81,16 @@
         <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-b border-gold/10 px-4 pt-2 pb-6 space-y-4 text-center">
             <a href="index.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Home</a>
             <a href="facials.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Facials</a>
-            <a href="hair-services.html" class="block text-sm font-medium tracking-wider uppercase py-2 text-gold font-semibold">Hair Care</a>
+            <a href="hair-services.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Hair Care</a>
             <a href="spa-waxing.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Spa & Waxing</a>
-            <a href="bridal-packages.html" class="block text-sm font-medium tracking-wider uppercase py-2 hover:text-gold text-gray-400">Deals & Bridal</a>
-            <div class="pt-4">
-                <a href="booking.html" class="inline-block bg-gradient-to-r from-gold-dark to-gold text-black font-semibold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider shadow-lg shadow-gold/10 w-full max-w-[250px]">
-                    <i class="far fa-calendar-alt mr-2 text-base"></i> Book Appointment
-                </a>
-            </div>
+            <a href="bridal-packages.html" class="block text-sm font-medium tracking-wider uppercase py-2 text-gold font-semibold">Deals & Bridal</a>
+            
+            <a href="booking.html" class="inline-block bg-gold text-black font-semibold px-6 py-2 rounded-full text-xs uppercase tracking-wider mt-4">
+                <i class="far fa-calendar-alt mr-2"></i> Book Appointment
+            </a>
         </div>
     </header>
+
 
     <section class="relative py-16 bg-neutral-950 border-b border-neutral-900 text-center">
         <div class="max-w-4xl mx-auto px-4">
@@ -103,7 +114,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
                 <script>
                     const hairColors = [
                         { name: "Dye Application", junior: "500", senior: "1,000" },
@@ -124,7 +134,6 @@
 
                     let selectedStaff = 'junior';
 
-                    // Extracted initialization scope function logic safely
                     function renderColorCards() {
                         let html = '';
                         hairColors.forEach((item, index) => {
@@ -197,91 +206,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr class="hover:bg-black/40 transition">
-                            <td class="p-5 font-serif font-bold text-sm text-white">Extenso Treatment</td>
-                            <td class="p-5 text-gray-400">Rs. 10,000</td>
-                            <td class="p-5 text-gray-400">Rs. 15,000</td>
-                            <td class="p-5 text-gray-400">Rs. 20,000</td>
-                            <td class="p-5 text-center">
-                                <select onchange="handleTableOrder(this, 'Extenso Treatment')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
-                                    <option value="">Book Now</option>
-                                    <option value="Shoulder (Rs. 10,000)">Shoulder</option>
-                                    <option value="Middle (Rs. 15,000)">Middle</option>
-                                    <option value="Waist (Rs. 20,000)">Waist</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-black/40 transition">
-                            <td class="p-5 font-serif font-bold text-sm text-white">Premium Keratin Care</td>
-                            <td class="p-5 text-gray-400">Rs. 12,000</td>
-                            <td class="p-5 text-gray-400">Rs. 15,000</td>
-                            <td class="p-5 text-gray-400">Rs. 18,000</td>
-                            <td class="p-5 text-center">
-                                <select onchange="handleTableOrder(this, 'Premium Keratin Care')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
-                                    <option value="">Book Now</option>
-                                    <option value="Shoulder (Rs. 12,000)">Shoulder</option>
-                                    <option value="Middle (Rs. 15,000)">Middle</option>
-                                    <option value="Waist (Rs. 18,000)">Waist</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-black/40 transition">
-                            <td class="p-5 font-serif font-bold text-sm text-white">Nano Plastia Reconstruction</td>
-                            <td class="p-5 text-gray-400">Rs. 13,000</td>
-                            <td class="p-5 text-gray-400">Rs. 18,000</td>
-                            <td class="p-5 text-gray-400">Rs. 20,000</td>
-                            <td class="p-5 text-center">
-                                <select onchange="handleTableOrder(this, 'Nano Plastia Reconstruction')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
-                                    <option value="">Book Now</option>
-                                    <option value="Shoulder (Rs. 13,000)">Shoulder</option>
-                                    <option value="Middle (Rs. 18,000)">Middle</option>
-                                    <option value="Waist (Rs. 20,000)">Waist</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-black/40 transition">
-                            <td class="p-5 font-serif font-bold text-sm text-white">Straight Shine Glaze</td>
-                            <td class="p-5 text-gray-400">Rs. 8,000</td>
-                            <td class="p-5 text-gray-400">Rs. 15,000</td>
-                            <td class="p-5 text-gray-400">Rs. 20,000</td>
-                            <td class="p-5 text-center">
-                                <select onchange="handleTableOrder(this, 'Straight Shine Glaze')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
-                                    <option value="">Book Now</option>
-                                    <option value="Shoulder (Rs. 8,000)">Shoulder</option>
-                                    <option value="Middle (Rs. 15,000)">Middle</option>
-                                    <option value="Waist (Rs. 20,000)">Waist</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-black/40 transition">
-                            <td class="p-5 font-serif font-bold text-sm text-white">Kerabond Structural Infusion</td>
-                            <td class="p-5 text-gray-400">Rs. 15,000</td>
-                            <td class="p-5 text-gray-400">Rs. 20,000</td>
-                            <td class="p-5 text-gray-400">Rs. 25,000</td>
-                            <td class="p-5 text-center">
-                                <select onchange="handleTableOrder(this, 'Kerabond Structural Infusion')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
-                                    <option value="">Book Now</option>
-                                    <option value="Shoulder (Rs. 15,000)">Shoulder</option>
-                                    <option value="Middle (Rs. 20,000)">Middle</option>
-                                    <option value="Waist (Rs. 25,000)">Waist</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-black/40 transition">
-                            <td class="p-5 font-serif font-bold text-sm text-white">Basic Protein Infusion</td>
-                            <td class="p-5 text-gray-400">Rs. 1,000</td>
-                            <td class="p-5 text-gray-400">Rs. 1,500</td>
-                            <td class="p-5 text-gray-400">Rs. 2,000</td>
-                            <td class="p-5 text-center">
-                                <select onchange="handleTableOrder(this, 'Basic Protein Infusion')" class="bg-neutral-900 text-gold border border-neutral-800 rounded px-2 py-1 outline-none text-[11px]">
-                                    <option value="">Book Now</option>
-                                    <option value="Shoulder (Rs. 1,000)">Shoulder</option>
-                                    <option value="Middle (Rs. 1,500)">Middle</option>
-                                    <option value="Waist (Rs. 2,000)">Waist</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
+                        </tbody>
                 </table>
             </div>
         </div>
@@ -289,51 +214,9 @@
     </main>
 
     <footer class="bg-black text-gray-500 pt-16 pb-8 border-t border-gold/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div>
-                <span class="font-serif text-xl font-bold tracking-widest text-gold uppercase block mb-3">Cmah Salon</span>
-                <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Luxury beauty treatment solutions crafted to perfection because you deserve nothing less than absolute shine.</p>
-                <div class="flex space-x-4 text-gray-400">
-                    <a href="https://instagram.com/cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
-                        <i class="fab fa-instagram text-sm"></i>
-                    </a>
-                    <a href="https://facebook.com/cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
-                        <i class="fab fa-facebook-f text-sm"></i>
-                    </a>
-                    <a href="https://tiktok.com/@cmahsaloon" target="_blank" class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gold hover:text-black transition">
-                        <i class="fab fa-tiktok text-sm"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div>
-                <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4 border-l-2 border-gold pl-2">Salon Details</h4>
-                <p class="text-xs font-light text-gray-400 leading-relaxed mb-2">
-                    <i class="fas fa-clock text-gold mr-2"></i> Mon - Thu Packages Available!
-                </p>
-                <p class="text-xs font-light text-gray-400 leading-relaxed">
-                    <i class="fas fa-map-marker-alt text-gold mr-2"></i> Dhoraji Silani Chowk, Opposite Habib Plaza, Near Al Khidmat, Karachi.
-                </p>
-            </div>
-
-            <div>
-                <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4 border-l-2 border-gold pl-2">Service Directory</h4>
-                <ul class="grid grid-cols-2 gap-2 text-xs font-light">
-                    <li><a href="facials.html" class="hover:text-gold transition">Facials</a></li>
-                    <li><a href="hair-services.html" class="text-gold">Hair Styling</a></li>
-                    <li><a href="spa-waxing.html" class="hover:text-gold transition">Spa Menu</a></li>
-                    <li><a href="bridal-packages.html" class="hover:text-gold transition">Bridal Deals</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-neutral-900 text-center text-xs tracking-wider">
-            <p>&copy; 2026 Cmah Salon. All Rights Reserved.</p>
-        </div>
-    </footer>
+        </footer>
 
     <script>
-        // Initial setup to build the grids on page load
         renderColorCards();
 
         function redirectToBooking(serviceName, price) {
@@ -350,17 +233,16 @@
             }
         }
 
-        // Toggle logic for Mobile Responsive Hamburger Navbar
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const btnIcon = document.querySelector('#mobile-menu-btn i');
             
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
-                btnIcon.className = "fas fa-times"; // Changes icon to 'X' when open
+                btnIcon.className = "fas fa-times";
             } else {
                 menu.classList.add('hidden');
-                btnIcon.className = "fas fa-bars";  // Changes icon back to hamburger
+                btnIcon.className = "fas fa-bars";
             }
         }
     </script>
